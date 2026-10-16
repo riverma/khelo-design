@@ -4,10 +4,10 @@ All notable changes to Khelo are recorded here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/).
 
-## [0.1.0] - 2026-10-16
+## [1.0.0] - 2026-10-16
 
 ### Added
-- First draft of Khelo, a design system for play.
+- First release of Khelo, a design system for play.
 - Two aesthetics: Khelo Mela (day) and Khelo Raat (night), following the OS
   until a choice is stored.
 - Seven truck-art hues (genda, haldi, kesar, rani, firozi, tota, mor) with

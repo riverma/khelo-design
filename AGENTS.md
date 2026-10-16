@@ -38,8 +38,10 @@ same constants in `tools/build-docs.mjs`, so they cannot drift. Edit `src/`, `fo
 
 ## Releases
 
-Semantic versioning, starting at 0.1.0 while it is being shaped. Keep
-`package.json` and `CHANGELOG.md` in step. Never push without an explicit
+Semantic versioning, `vMAJOR.MINOR.PATCH`, from `v1.0.0`. Patch for a fix,
+minor for a feature, major for a breaking change; a token value moving is
+breaking. Keep `package.json` and `CHANGELOG.md` in step (the docs footer
+reads `package.json`), and cut a GitHub release on every major and minor bump. Never push without an explicit
 go-ahead, share screenshots of visual changes first, and review the diff for
 secrets before any push. Commit messages are plain, with no AI attribution
 trailers.
