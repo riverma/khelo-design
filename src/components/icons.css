@@ -1,0 +1,43 @@
+/* Khelo — icons and illustration.
+
+   Draw it; never use an emoji. An emoji is drawn by someone else's
+   platform, looks different on every device, and brings that platform's
+   visual voice into yours. Khelo's art is drawn in one hand:
+
+   - a 48-unit grid, an ink outline at 2.5 units, round joins and caps;
+   - flat fills from the seven hues, never a gradient inside an icon;
+   - motifs from everyday Indian play and life: kite, top, kulhad,
+     marigold, lotus, peacock feather, dhol, rangoli;
+   - decorative art is aria-hidden; meaning lives in the text beside it.
+
+   The outline is currentColor, so it follows the ink. The fills follow the
+   aesthetic: painted colors by day, lamplit ones by night. Files are in
+   src/icons/, and are inlined, never loaded as images, so these classes
+   reach them. */
+
+:root, .khelo-mela, .khelo-raat {
+  --mask-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M10 25 L20 34 L38 14' fill='none' stroke='%23000' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.kh-icon {
+  width: var(--icon-size, 1.5em);
+  height: var(--icon-size, 1.5em);
+  flex: none;
+  vertical-align: middle;
+  overflow: visible;
+}
+.kh-icon--s  { --icon-size: 1.15em; }
+.kh-icon--l  { --icon-size: 3rem; }
+.kh-icon--xl { --icon-size: 5rem; }
+
+.kh-icon .kh-f-genda  { fill: var(--icon-genda); }
+.kh-icon .kh-f-kesar  { fill: var(--icon-kesar); }
+.kh-icon .kh-f-rani   { fill: var(--icon-rani); }
+.kh-icon .kh-f-firozi { fill: var(--icon-firozi); }
+.kh-icon .kh-f-tota   { fill: var(--icon-tota); }
+.kh-icon .kh-f-mor    { fill: var(--icon-mor); }
+
+/* In forced colors the fills drop away and the line drawing remains. */
+@media (forced-colors: active) {
+  .kh-icon [class^="kh-f-"] { fill: Canvas; }
+}

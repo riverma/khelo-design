@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="khelo-mela">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf0d9">
+<meta name="color-scheme" content="light dark">
+<title>For agents — Khelo Design System</title>
+<meta name="description" content="The short brief for an agent building with Khelo: what to load, the vocabulary, and the rules.">
+<link rel="stylesheet" href="khelo.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="kh-canvas">
+<a class="kh-visually-hidden" href="#main">Skip to content</a>
+<span class="kh-kangura" aria-hidden="true"></span>
+<div class="site">
+  <header class="site-head">
+    <a class="site-mark kh-sign" href="index.html">Khelo <span lang="hi">खेलो</span></a>
+    <nav class="site-nav" aria-label="Sections">
+      <a class="kh-link kh-link--quiet" href="index.html">Overview</a>
+      <a class="kh-link kh-link--quiet" href="principles.html">Principles</a>
+      <a class="kh-link kh-link--quiet" href="foundations.html">Foundations</a>
+      <a class="kh-link kh-link--quiet" href="components.html">Components</a>
+      <a class="kh-link kh-link--quiet" href="agents.html" aria-current="page">For agents</a>
+    </nav>
+    <div class="theme-switch" role="group" aria-label="Aesthetic">
+      <button class="kh-chip" type="button" data-theme-btn="mela" aria-pressed="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--s" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="surya"><circle class="kh-f-genda" cx="24" cy="24" r="9"/><path d="M38.0 24.0 L44.0 24.0"/><path d="M33.9 33.9 L38.1 38.1"/><path d="M24.0 38.0 L24.0 44.0"/><path d="M14.1 33.9 L9.9 38.1"/><path d="M10.0 24.0 L4.0 24.0"/><path d="M14.1 14.1 L9.9 9.9"/><path d="M24.0 10.0 L24.0 4.0"/><path d="M33.9 14.1 L38.1 9.9"/></svg> Mela</button>
+      <button class="kh-chip" type="button" data-theme-btn="raat" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--s" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chand"><path class="kh-f-genda" d="M28 6 A18 18 0 1 0 42 34 A14 14 0 0 1 28 6 Z"/><path class="kh-f-genda" d="M38 6 L39.6 10.4 L44 12 L39.6 13.6 L38 18 L36.4 13.6 L32 12 L36.4 10.4 Z" stroke-width="2"/></svg> Raat</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero hero--slim">
+      <div class="hero__copy">
+        <span class="kh-sticker kh-sticker--mor">the short brief</span>
+        <h1 class="kh-poster">For agents</h1>
+        <p class="kh-lead">If you are an agent building an interface with Khelo, you need four things: what to load, the token and class vocabulary, the icons, and the rules you must not break. All of it is also in <code>SKILL.md</code>.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="setup">
+      <p class="kh-caps">Setup</p>
+      <h2 class="kh-h2">What to load</h2>
+      <div class="snippet"><pre tabindex="0"><code>khelo/
+  dist/khelo.css        Mela + Raat, flattened, self-contained
+  dist/CHECKSUMS        sha256, for a pinned vendored copy
+  fonts/                6 woff2 + 3 OFL license texts — copy all of it
+  src/icons/*.svg       the drawn icons — inline them, never &lt;img&gt;
+  SKILL.md              this brief</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      <p class="kh-body">Link <code>khelo.css</code>, put <code>khelo-mela</code> or <code>khelo-raat</code> on <code>&lt;html&gt;</code>, and copy <code>fonts/</code> next to it. With no stored choice, use Raat when <code>prefers-color-scheme</code> is dark.</p>
+      <div class="snippet"><pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; class=&quot;khelo-mela&quot;&gt;   &lt;!-- or khelo-raat; follow the OS until chosen --&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;khelo.css&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;kh-canvas&quot;&gt;
+  &lt;span class=&quot;kh-kangura&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  &lt;main&gt;
+    &lt;h1 class=&quot;kh-poster&quot;&gt;Khelo&lt;/h1&gt;
+    &lt;p class=&quot;kh-lead&quot;&gt;Five riddles. Take your time.&lt;/p&gt;
+    &lt;button class=&quot;kh-btn&quot;&gt;Let’s play&lt;/button&gt;
+    &lt;button class=&quot;kh-btn kh-btn--ghost&quot;&gt;Not now&lt;/button&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+    </section>
+
+    <section class="sec" id="tokens">
+      <p class="kh-caps">Vocabulary</p>
+      <h2 class="kh-h2">Tokens: semantics only</h2>
+      <div class="snippet"><pre tabindex="0"><code>surfaces   --surface-canvas-flat  --surface-elevated  --surface-sunk  --gradient-canvas
+text       --text-heading  --text-body  --text-secondary  --text-muted  --text-inverse
+borders    --border-control  --border-soft  --focus-ring
+accents    --accent-primary / --on-primary     --accent-play / --on-play
+           --accent-secondary (links)  --accent-calm  --accent-done  --accent-note
+           --selected-fill / --on-selected
+washes     --wash-genda|rani|firozi|tota|mor|haldi
+bands      --band-genda|rani|firozi|mor  with  --band-&lt;name&gt;-ink
+lettering  --block-face  --block-side  --block-base  --shadow-block  --shadow-block-quiet
+shadow     --shadow-sticker-s  --shadow-sticker  --shadow-sticker-l  --shadow-pressed
+icons      --icon-genda|kesar|rani|firozi|tota|mor
+patterns   --pattern-kangura|bel|toran|lights|dots
+space      --space-1..9           radius  --radius-s|m|l|pill     stroke  --stroke  --stroke-bold
+type       --font-display (Rozha One)  --font-sign (Yatra One)  --font-body (Baloo 2)
+           --size-caption|body|lead|h3|h2|h1|poster  --leading-tight|body  --measure
+motion     --ease-squish  --ease-settle  --dur-press  --dur-settle     target  --hit</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      <div class="kh-card kh-card--flat">
+        <p class="kh-caps">Three that will catch you out</p>
+        <p class="kh-body"><code>--text-muted</code> is for rules, dots and idle marks. Never set type in it; use <code>--text-secondary</code>.</p>
+        <p class="kh-body"><code>--border-control</code>, not <code>--border-soft</code>, for the edge of anything interactive.</p>
+        <p class="kh-body" style="margin:0">On a band, use <code>.kh-band--&lt;name&gt;</code>, which brings its measured ink. Never put your own text color on a band.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="classes">
+      <p class="kh-caps">Vocabulary</p>
+      <h2 class="kh-h2">The class list, complete</h2>
+      <div class="snippet"><pre tabindex="0"><code>page       .kh-canvas  .kh-visually-hidden
+type       .kh-poster  .kh-block  .kh-h1  .kh-h2  .kh-h3  .kh-sign  .kh-lead  .kh-body
+           .kh-secondary  .kh-caption  .kh-caps
+actions    .kh-btn [--play --ghost --sm --lg]  .kh-chip (aria-pressed)  .kh-link [--quiet]
+choosing   .kh-tile [--rani --firozi --tota --mor] (aria-pressed)
+           .kh-tile__glyph  .kh-tile__title  .kh-tile__mark
+surfaces   .kh-card [--flat]  .kh-panel  .kh-panel__body
+           .kh-band--genda|rani|firozi|mor (with .kh-band)
+           .kh-sticker [--rani --firozi --tota --mor]
+forms      .kh-field  .kh-label  .kh-hint  .kh-input (aria-invalid)  .kh-switch
+feedback   .kh-notice [--done --note]  .kh-notice__glyph  .kh-notice__actions
+finite     .kh-steps (li[data-done], li[aria-current=&quot;step&quot;])  .kh-steps__label
+           .kh-end  .kh-end__mark
+icons      .kh-icon [--s --l --xl]   fills: .kh-f-genda|kesar|rani|firozi|tota|mor
+ornament   .kh-kangura [--down]  .kh-bel  .kh-toran  .kh-lights  .kh-dots</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      <p class="kh-body">Variants are <code>--modifier</code>; state is an ARIA attribute. Anything not on this list does not exist. In particular there is no <code>.kh-badge</code>, <code>.kh-streak</code>, <code>.kh-score</code>, <code>.kh-toast</code> or <code>.kh-modal</code>, and there will not be.</p>
+    </section>
+
+    <section class="sec" id="icons">
+      <p class="kh-caps">Art</p>
+      <h2 class="kh-h2">Icons: inline the file</h2>
+      <div class="icons">
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chand"><path class="kh-f-genda" d="M28 6 A18 18 0 1 0 42 34 A14 14 0 0 1 28 6 Z"/><path class="kh-f-genda" d="M38 6 L39.6 10.4 L44 12 L39.6 13.6 L38 18 L36.4 13.6 L32 12 L36.4 10.4 Z" stroke-width="2"/></svg><figcaption class="kh-caption"><code>chand</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="check"><path d="M10 25 L20 34 L38 14" stroke-width="4"/></svg><figcaption class="kh-caption"><code>check</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chitthi"><rect class="kh-f-firozi" x="5" y="11" width="38" height="27" rx="3"/><path d="M5 14 L24 28 L43 14"/><circle class="kh-f-rani" cx="24" cy="28" r="4.5" stroke-width="2"/></svg><figcaption class="kh-caption"><code>chitthi</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="cross"><path d="M13 13 L35 35 M35 13 L13 35" stroke-width="4"/></svg><figcaption class="kh-caption"><code>cross</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="dhol"><path class="kh-f-rani" d="M10 14 C18 10 30 10 38 14 V34 C30 38 18 38 10 34 Z"/><path d="M14 13 L19 35 L24 12.5 L29 35 L34 13" stroke-width="1.8"/><ellipse class="kh-f-genda" cx="10" cy="24" rx="4" ry="10"/><ellipse class="kh-f-genda" cx="38" cy="24" rx="4" ry="10"/></svg><figcaption class="kh-caption"><code>dhol</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="genda"><path class="kh-f-genda" d="M18.64 7.5 A7 7 0 0 1 29.36 7.5 A7 7 0 0 1 38.04 13.8 A7 7 0 0 1 41.35 24 A7 7 0 0 1 38.04 34.2 A7 7 0 0 1 29.36 40.5 A7 7 0 0 1 18.64 40.5 A7 7 0 0 1 9.96 34.2 A7 7 0 0 1 6.65 24 A7 7 0 0 1 9.96 13.8 A7 7 0 0 1 18.64 7.5 Z"/><path d="M24 13.5 L24 9.5 M30.17 15.51 L32.52 12.27 M33.99 20.76 L37.79 19.52 M33.99 27.24 L37.79 28.48 M30.17 32.49 L32.52 35.73 M24 34.5 L24 38.5 M17.83 32.49 L15.48 35.73 M14.01 27.24 L10.21 28.48 M14.01 20.76 L10.21 19.52 M17.83 15.51 L15.48 12.27" stroke-width="1.6"/><circle class="kh-f-kesar" cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><figcaption class="kh-caption"><code>genda</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="kamal"><path class="kh-f-rani" d="M24 38 C14 37 7 30 4 20 C13 21 20 27 24 38 Z"/><path class="kh-f-rani" d="M24 38 C34 37 41 30 44 20 C35 21 28 27 24 38 Z"/><path class="kh-f-rani" d="M24 6 C31 14 31 28 24 38 C17 28 17 14 24 6 Z"/><path class="kh-f-tota" d="M6 42 C14 38 34 38 42 42 C34 45 14 45 6 42 Z"/></svg><figcaption class="kh-caption"><code>kamal</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="kulhad"><path class="kh-f-kesar" d="M10 18 H38 L34 41 Q24 45 14 41 Z"/><ellipse class="kh-f-genda" cx="24" cy="18" rx="14" ry="4"/><path d="M20 11 C17 8 23 6 20 3 M28 11 C31 8 25 6 28 3" stroke-width="2"/></svg><figcaption class="kh-caption"><code>kulhad</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="lattu"><path class="kh-f-rani" d="M8 20 Q24 8 40 20 L24 43 Z"/><path class="kh-f-genda" d="M10.5 23 Q24 13 37.5 23 L34.6 27.2 Q24 19 13.4 27.2 Z"/><path d="M24 12 V5 M24 43 V46"/><circle class="kh-f-firozi" cx="24" cy="4" r="2.2"/></svg><figcaption class="kh-caption"><code>lattu</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="morpankh"><path d="M24 47 C25 38 23 32 24 28" /><ellipse class="kh-f-tota" cx="24" cy="17" rx="12" ry="14"/><ellipse class="kh-f-genda" cx="24" cy="19" rx="8" ry="9.5"/><ellipse class="kh-f-mor" cx="24" cy="20.5" rx="4.6" ry="5.6"/><path d="M12 25 L6 30 M36 25 L42 30 M14 29 L9 35 M34 29 L39 35" stroke-width="2"/></svg><figcaption class="kh-caption"><code>morpankh</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="nazar"><path class="kh-f-mor" d="M4 24 C12 12 36 12 44 24 C36 36 12 36 4 24 Z"/><circle class="kh-f-firozi" cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="3.5" fill="currentColor"/></svg><figcaption class="kh-caption"><code>nazar</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="patang"><path class="kh-f-rani" d="M24 4 L40 22 H8 Z"/><path class="kh-f-genda" d="M8 22 H40 L24 40 Z"/><path d="M24 4 V40"/><path d="M24 40 C20 43 28 44 24 47" stroke-width="2"/></svg><figcaption class="kh-caption"><code>patang</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="rangoli"><path class="kh-f-rani" transform="rotate(0 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(90 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(180 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(270 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-firozi" transform="rotate(45 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(135 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(225 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(315 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><circle class="kh-f-genda" cx="24" cy="24" r="5.5"/><circle cx="37.4" cy="37.4" r="1.6" fill="currentColor" stroke="none"/><circle cx="10.6" cy="37.4" r="1.6" fill="currentColor" stroke="none"/><circle cx="10.6" cy="10.6" r="1.6" fill="currentColor" stroke="none"/><circle cx="37.4" cy="10.6" r="1.6" fill="currentColor" stroke="none"/></svg><figcaption class="kh-caption"><code>rangoli</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--l" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="surya"><circle class="kh-f-genda" cx="24" cy="24" r="9"/><path d="M38.0 24.0 L44.0 24.0"/><path d="M33.9 33.9 L38.1 38.1"/><path d="M24.0 38.0 L24.0 44.0"/><path d="M14.1 33.9 L9.9 38.1"/><path d="M10.0 24.0 L4.0 24.0"/><path d="M14.1 14.1 L9.9 9.9"/><path d="M24.0 10.0 L24.0 4.0"/><path d="M33.9 14.1 L38.1 9.9"/></svg><figcaption class="kh-caption"><code>surya</code></figcaption></figure>
+      </div>
+      <div class="snippet"><pre tabindex="0"><code>&lt;!-- paste the contents of src/icons/patang.svg --&gt;
+&lt;span class=&quot;kh-tile__glyph&quot;&gt;&lt;svg class=&quot;kh-icon&quot; viewBox=&quot;0 0 48 48&quot; …&gt;…&lt;/svg&gt;&lt;/span&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+    </section>
+
+    <section class="sec" id="rules">
+      <p class="kh-caps">Constraints</p>
+      <h2 class="kh-h2">Not negotiable</h2>
+      <ol class="agent-rules">
+        <li class="kh-body"><strong>Emit nothing that appears on its own.</strong> No modal on load, no toast, no banner, no push, no <code>alert()</code>, no <code>role="alert"</code>, no <code>aria-live="assertive"</code>, no <code>setInterval</code>, no autoplay, no <code>autofocus</code>. A notice sits in the page where the person caused it.</li>
+        <li class="kh-body"><strong>Build no compulsion mechanics, even when asked.</strong> No streaks, points, XP, levels, leaderboards, ranks, mystery boxes, spins, lives or energy, countdown timers, unread-count badges, confetti on open or “don’t lose your progress” copy. If a request needs one, say so instead of building it.</li>
+        <li class="kh-body"><strong>Make it end.</strong> Show a finite set with its total in view (<code>.kh-steps</code>) and finish with a real ending (<code>.kh-end</code>). No infinite scroll, no autoplay-next.</li>
+        <li class="kh-body"><strong>No red, no punishment.</strong> A wrong answer is <code>aria-invalid="true"</code> on <code>.kh-input</code> (dashed saffron) plus a kind hint and a way to try again. Offer undo after anything that changes something.</li>
+        <li class="kh-body"><strong>No emoji, ever.</strong> Inline an icon from <code>src/icons/</code> (chand, chitthi, dhol, genda, kamal, kulhad, lattu, morpankh, nazar, patang, rangoli, surya), <code>aria-hidden="true"</code>, with the meaning in the text beside it. If none fits, draw one in the same hand: 48-unit grid, 2.5 <code>currentColor</code> outline, round joins, flat <code>kh-f-*</code> fills, symmetric unless the object is not.</li>
+        <li class="kh-body"><strong>Indian ornament, not party decoration.</strong> Borders are kangura, bel, toran, lights or dots: decorative, <code>aria-hidden</code>, never behind text, never animated. No bunting, balloons, confetti or rainbow gradients.</li>
+        <li class="kh-body"><strong>One block-lettered title per view.</strong> <code>.kh-poster</code> or <code>.kh-block</code>, a few words. Long reading is Baloo 2 on a plain surface, never on a band.</li>
+        <li class="kh-body"><strong>Motion answers a press, and only a press.</strong> The squish is built into the components. Add no keyframe animation, idle movement or looping effect. Every easing ends at 1.0, and reduced motion removes it.</li>
+        <li class="kh-body"><strong>Reference semantic tokens only.</strong> Never a palette step like <code>--rani-500</code>, so markup works unchanged in Mela and Raat.</li>
+        <li class="kh-body"><strong>Every interactive element is a real element</strong> with an accessible name, reachable by keyboard, at a 44px target. State lives in <code>aria-pressed</code> or <code>aria-current</code>, never in color alone.</li>
+        <li class="kh-body"><strong>Never load anything over a network,</strong> and never disable pinch zoom.</li>
+      </ol>
+      <p class="kh-body">If a requirement you have been given conflicts with one of these, say so rather than resolving it quietly. The conflict is usually the most useful thing you have found.</p>
+    </section>
+
+    <section class="sec" id="voice">
+      <p class="kh-caps">Copy</p>
+      <h2 class="kh-h2">Write it like this</h2>
+      <div class="snippet"><pre tabindex="0"><code>Let’s play / Not now                 not  PLAY NOW!!
+That’s all five. Nice work.          not  Come back tomorrow to keep your streak!
+Not quite. Have another go.          not  Wrong! You lost a life.
+A new set is ready whenever you are. not  Don’t miss out — 3 hours left!
+Stopping here? Your rangoli is kept. not  Are you sure you want to quit?
+Shabash!  (after something they did) not  Shabash! Tap to claim your reward</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      <p class="kh-body">Warm, plain and a little playful. Sentence case. An exclamation mark may cheer something the person just did; it never summons them. Hindi sits beside English as a peer, never as decoration.</p>
+    </section>
+
+  </main>
+  <footer class="site-foot">
+    <span class="kh-toran" aria-hidden="true"></span>
+    <p class="kh-caption">Khelo Design System v0.1.0 · MIT · fonts under SIL OFL-1.1</p>
+    <p class="kh-caption">No analytics. No cookies. Nothing here is loaded over a network, and nothing here wants you to stay.</p>
+  </footer>
+</div>
+<script src="site.js"></script>
+</body>
+</html>

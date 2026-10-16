@@ -1,0 +1,36 @@
+/* =====================================================================
+   Khelo — a design system for play. Authoring entry point.
+   =====================================================================
+
+   Put the aesthetic class on <html>:
+
+     <html lang="en" class="khelo-mela">   the fair by day
+     <html lang="en" class="khelo-raat">   the fair by night
+
+   With no stored choice, start in Raat when prefers-color-scheme is dark
+   and in Mela otherwise, and follow the system if it changes. A choice
+   the person makes inside the app wins and is remembered.
+
+   For anything shipped, use dist/khelo.css (flattened, no @import). */
+
+@import url("fonts/khelo.css");
+@import url("tokens/shared.css");
+
+@import url("tokens/mela/palette.css");
+@import url("tokens/mela/gradients.css");
+@import url("tokens/mela/semantic.css");
+@import url("tokens/mela/elevation.css");
+
+@import url("tokens/raat/palette.css");
+@import url("tokens/raat/gradients.css");
+@import url("tokens/raat/semantic.css");
+@import url("tokens/raat/elevation.css");
+
+@import url("base.css");
+@import url("type.css");
+@import url("patterns/patterns.css");
+@import url("components/actions.css");
+@import url("components/surfaces.css");
+@import url("components/forms.css");
+@import url("components/feedback.css");
+@import url("components/icons.css");

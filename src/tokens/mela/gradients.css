@@ -1,0 +1,19 @@
+/* Khelo Mela — gradients. Each poster band ships with ink measured to
+   read on every one of its stops (tools/check-contrast.mjs). Bands are
+   duotones, one hue deepening like a screen-printed poster, never a
+   rainbow. A band is a large static surface; it never animates. */
+
+.khelo-mela {
+  /* The page: noon sun pooling top-left on cream paper. */
+  --gradient-canvas: radial-gradient(70% 60% at 10% -10%, #fde9a8 0%, #fde9a800 70%),
+                     linear-gradient(170deg, #fdf3df 0%, #fbf0d9 55%, #f7e6c8 100%);
+
+  --band-genda:      linear-gradient(120deg, #f7cf1d 0%, #f5a300 55%, #f08a1c 100%);
+  --band-genda-ink:  #2a1840;
+  --band-rani:       linear-gradient(120deg, #a6146a 0%, #91165f 100%);
+  --band-rani-ink:   #fff9ee;
+  --band-firozi:     linear-gradient(120deg, #4fc0b8 0%, #11a8a4 100%);
+  --band-firozi-ink: #2a1840;
+  --band-mor:        linear-gradient(120deg, #18417d 0%, #1660b0 100%);
+  --band-mor-ink:    #fff9ee;
+}

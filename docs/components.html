@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="khelo-mela">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf0d9">
+<meta name="color-scheme" content="light dark">
+<title>Components — Khelo Design System</title>
+<meta name="description" content="Buttons, chips, tiles, stickers, cards, forms, notices and finite progress.">
+<link rel="stylesheet" href="khelo.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="kh-canvas">
+<a class="kh-visually-hidden" href="#main">Skip to content</a>
+<span class="kh-kangura" aria-hidden="true"></span>
+<div class="site">
+  <header class="site-head">
+    <a class="site-mark kh-sign" href="index.html">Khelo <span lang="hi">खेलो</span></a>
+    <nav class="site-nav" aria-label="Sections">
+      <a class="kh-link kh-link--quiet" href="index.html">Overview</a>
+      <a class="kh-link kh-link--quiet" href="principles.html">Principles</a>
+      <a class="kh-link kh-link--quiet" href="foundations.html">Foundations</a>
+      <a class="kh-link kh-link--quiet" href="components.html" aria-current="page">Components</a>
+      <a class="kh-link kh-link--quiet" href="agents.html">For agents</a>
+    </nav>
+    <div class="theme-switch" role="group" aria-label="Aesthetic">
+      <button class="kh-chip" type="button" data-theme-btn="mela" aria-pressed="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--s" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="surya"><circle class="kh-f-genda" cx="24" cy="24" r="9"/><path d="M38.0 24.0 L44.0 24.0"/><path d="M33.9 33.9 L38.1 38.1"/><path d="M24.0 38.0 L24.0 44.0"/><path d="M14.1 33.9 L9.9 38.1"/><path d="M10.0 24.0 L4.0 24.0"/><path d="M14.1 14.1 L9.9 9.9"/><path d="M24.0 10.0 L24.0 4.0"/><path d="M33.9 14.1 L38.1 9.9"/></svg> Mela</button>
+      <button class="kh-chip" type="button" data-theme-btn="raat" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--s" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chand"><path class="kh-f-genda" d="M28 6 A18 18 0 1 0 42 34 A14 14 0 0 1 28 6 Z"/><path class="kh-f-genda" d="M38 6 L39.6 10.4 L44 12 L39.6 13.6 L38 18 L36.4 13.6 L32 12 L36.4 10.4 Z" stroke-width="2"/></svg> Raat</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero hero--slim">
+      <div class="hero__copy">
+        <span class="kh-sticker kh-sticker--tota">touch everything</span>
+        <h1 class="kh-poster">Components</h1>
+        <p class="kh-lead">Everything on this page is safe to press. Nothing here counts you.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="buttons">
+      <p class="kh-caps">Actions</p>
+      <h2 class="kh-h2">Buttons are stickers</h2>
+      <div class="spec">
+        <p class="kh-caps">Button</p>
+        <div class="spec__demo"><div class="row row--gap"><button class="kh-btn" type="button">Let’s play</button><button class="kh-btn kh-btn--play" type="button">Shabash!</button><button class="kh-btn kh-btn--ghost" type="button">Maybe later</button><button class="kh-btn" type="button" disabled>Not yet</button></div>
+        <div class="row row--gap"><button class="kh-btn kh-btn--sm" type="button">Small</button><button class="kh-btn kh-btn--lg" type="button">Large</button></div></div>
+        <p class="kh-body kh-secondary">Marigold is the primary action; rani is the one loud “go”. Use at most one rani button per view. Disabled goes dashed and flat, not grayed into invisibility.</p>
+      <div class="snippet"><pre tabindex="0"><code>&lt;button class=&quot;kh-btn&quot;&gt;Let’s play&lt;/button&gt;
+&lt;button class=&quot;kh-btn kh-btn--play&quot;&gt;Shabash!&lt;/button&gt;
+&lt;button class=&quot;kh-btn kh-btn--ghost&quot;&gt;Maybe later&lt;/button&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      </div>
+      <div class="spec">
+        <p class="kh-caps">Chip</p>
+        <div class="spec__demo"><div class="row" role="group" aria-label="Pick a snack" data-chips><button class="kh-chip" type="button" aria-pressed="true">Samosa</button><button class="kh-chip" type="button" aria-pressed="false">Jalebi</button><button class="kh-chip" type="button" aria-pressed="false">Pani puri</button><button class="kh-chip" type="button" aria-pressed="false">Chai</button></div></div>
+        <p class="kh-body kh-secondary">A choice among a few. <code>aria-pressed</code> carries the state, and selection also thickens the outline, so it never relies on color alone.</p>
+      <div class="snippet"><pre tabindex="0"><code>&lt;button class=&quot;kh-chip&quot; aria-pressed=&quot;true&quot;&gt;Samosa&lt;/button&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      </div>
+      <div class="spec">
+        <p class="kh-caps">Link</p>
+        <div class="spec__demo"><p class="kh-body">Read <a class="kh-link" href="principles.html">the rules of the game</a> first.</p></div>
+
+      <div class="snippet"><pre tabindex="0"><code>&lt;a class=&quot;kh-link&quot; href=&quot;…&quot;&gt;the rules&lt;/a&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      </div>
+    </section>
+
+    <section class="sec" id="tiles">
+      <p class="kh-caps">Choosing</p>
+      <h2 class="kh-h2">Tiles</h2>
+      <div class="spec">
+        <p class="kh-caps">Tile</p>
+        <div class="spec__demo"><div class="tiles" data-tiles>
+          <button class="kh-tile" type="button" aria-pressed="false"><span class="kh-tile__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="patang"><path class="kh-f-rani" d="M24 4 L40 22 H8 Z"/><path class="kh-f-genda" d="M8 22 H40 L24 40 Z"/><path d="M24 4 V40"/><path d="M24 40 C20 43 28 44 24 47" stroke-width="2"/></svg></span><span class="kh-tile__title">Patang</span><span class="kh-tile__mark">Kites</span></button>
+          <button class="kh-tile kh-tile--rani" type="button" aria-pressed="true"><span class="kh-tile__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="dhol"><path class="kh-f-rani" d="M10 14 C18 10 30 10 38 14 V34 C30 38 18 38 10 34 Z"/><path d="M14 13 L19 35 L24 12.5 L29 35 L34 13" stroke-width="1.8"/><ellipse class="kh-f-genda" cx="10" cy="24" rx="4" ry="10"/><ellipse class="kh-f-genda" cx="38" cy="24" rx="4" ry="10"/></svg></span><span class="kh-tile__title">Gaana</span><span class="kh-tile__mark">Songs</span></button>
+          <button class="kh-tile kh-tile--firozi" type="button" aria-pressed="false"><span class="kh-tile__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="lattu"><path class="kh-f-rani" d="M8 20 Q24 8 40 20 L24 43 Z"/><path class="kh-f-genda" d="M10.5 23 Q24 13 37.5 23 L34.6 27.2 Q24 19 13.4 27.2 Z"/><path d="M24 12 V5 M24 43 V46"/><circle class="kh-f-firozi" cx="24" cy="4" r="2.2"/></svg></span><span class="kh-tile__title">Lattu</span><span class="kh-tile__mark">Spinning tops</span></button>
+          <button class="kh-tile kh-tile--tota" type="button" aria-pressed="false"><span class="kh-tile__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="rangoli"><path class="kh-f-rani" transform="rotate(0 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(90 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(180 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(270 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-firozi" transform="rotate(45 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(135 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(225 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(315 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><circle class="kh-f-genda" cx="24" cy="24" r="5.5"/><circle cx="37.4" cy="37.4" r="1.6" fill="currentColor" stroke="none"/><circle cx="10.6" cy="37.4" r="1.6" fill="currentColor" stroke="none"/><circle cx="10.6" cy="10.6" r="1.6" fill="currentColor" stroke="none"/><circle cx="37.4" cy="10.6" r="1.6" fill="currentColor" stroke="none"/></svg></span><span class="kh-tile__title">Rangoli</span><span class="kh-tile__mark">Patterns</span></button>
+        </div></div>
+        <p class="kh-body kh-secondary">One big choice. A selected tile turns haldi yellow and gains a drawn check beside its label, so the state reads without color.</p>
+      <div class="snippet"><pre tabindex="0"><code>&lt;button class=&quot;kh-tile kh-tile--rani&quot; aria-pressed=&quot;true&quot;&gt;
+  &lt;span class=&quot;kh-tile__glyph&quot;&gt;&lt;svg class=&quot;kh-icon&quot; …&gt;…&lt;/svg&gt;&lt;/span&gt;
+  &lt;span class=&quot;kh-tile__title&quot;&gt;Gaana&lt;/span&gt;
+  &lt;span class=&quot;kh-tile__mark&quot;&gt;Songs&lt;/span&gt;
+&lt;/button&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      </div>
+    </section>
+
+    <section class="sec" id="surfaces">
+      <p class="kh-caps">Surfaces</p>
+      <h2 class="kh-h2">Cards, panels, bands and stickers</h2>
+      <div class="grid3">
+        <div class="kh-card"><p class="kh-caps">.kh-card</p><h3 class="kh-h3">A sticker card</h3><p class="kh-body kh-secondary">Ink outline, hard shadow, big round corners.</p></div>
+        <div class="kh-panel"><div class="kh-panel__body"><p class="kh-caps">.kh-panel</p><h3 class="kh-h3">A truck panel</h3><p class="kh-body kh-secondary">Framed top and bottom in the kangura temple border.</p></div></div>
+        <div class="kh-band kh-band--rani"><p class="kh-caps">.kh-band--rani</p><h3 class="kh-h3">A poster band</h3><p class="kh-body">Carries its own measured ink.</p></div>
+      </div>
+      <div class="spec">
+        <p class="kh-caps">Sticker</p>
+        <div class="spec__demo"><div class="row row--gap"><span class="kh-sticker">Naya!</span><span class="kh-sticker kh-sticker--rani">Shabash</span><span class="kh-sticker kh-sticker--firozi">Thanda</span><span class="kh-sticker kh-sticker--tota">Ho gaya</span><span class="kh-sticker kh-sticker--mor" lang="hi">दोस्त</span></div></div>
+        <p class="kh-body kh-secondary">A label slapped on at a slight angle. The tilt is fixed, never animated. Stickers name things. They never count things: there is no unread badge in Khelo.</p>
+      <div class="snippet"><pre tabindex="0"><code>&lt;span class=&quot;kh-sticker kh-sticker--rani&quot;&gt;Shabash&lt;/span&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+      </div>
+    </section>
+
+    <section class="sec" id="forms">
+      <p class="kh-caps">Input</p>
+      <h2 class="kh-h2">Forms</h2>
+      <div class="grid2">
+        <div class="kh-card">
+          <div class="kh-field"><label class="kh-label" for="nm">Your name</label><input class="kh-input" id="nm" placeholder="Anything you like"><span class="kh-hint">Only shown to your friends.</span></div>
+          <div class="kh-field" style="margin-top:var(--space-4)"><label class="kh-label" for="ans">What has keys but opens no locks?</label><input class="kh-input" id="ans" value="A door" aria-invalid="true" aria-describedby="ans-h"><span class="kh-hint" id="ans-h">Not quite. Have another go, or peek at the answer.</span></div>
+        </div>
+        <div class="kh-card">
+          <label class="kh-switch"><input type="checkbox" checked> Sounds</label><br>
+          <label class="kh-switch"><input type="checkbox"> Play with friends</label>
+          <p class="kh-body kh-secondary">A wrong answer goes dashed saffron and says something kind. No red, no shake, no buzzer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="feedback">
+      <p class="kh-caps">Feedback</p>
+      <h2 class="kh-h2">Notices that wait where you left them</h2>
+      <div class="stack">
+        <div class="kh-notice kh-notice--done"><span class="kh-notice__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="genda"><path class="kh-f-genda" d="M18.64 7.5 A7 7 0 0 1 29.36 7.5 A7 7 0 0 1 38.04 13.8 A7 7 0 0 1 41.35 24 A7 7 0 0 1 38.04 34.2 A7 7 0 0 1 29.36 40.5 A7 7 0 0 1 18.64 40.5 A7 7 0 0 1 9.96 34.2 A7 7 0 0 1 6.65 24 A7 7 0 0 1 9.96 13.8 A7 7 0 0 1 18.64 7.5 Z"/><path d="M24 13.5 L24 9.5 M30.17 15.51 L32.52 12.27 M33.99 20.76 L37.79 19.52 M33.99 27.24 L37.79 28.48 M30.17 32.49 L32.52 35.73 M24 34.5 L24 38.5 M17.83 32.49 L15.48 35.73 M14.01 27.24 L10.21 28.48 M14.01 20.76 L10.21 19.52 M17.83 15.51 L15.48 12.27" stroke-width="1.6"/><circle class="kh-f-kesar" cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg></span><div><strong>Saved.</strong> Your rangoli is in your sketchbook.</div><div class="kh-notice__actions"><button class="kh-btn kh-btn--sm kh-btn--ghost" type="button">Undo</button></div></div>
+        <div class="kh-notice"><span class="kh-notice__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chitthi"><rect class="kh-f-firozi" x="5" y="11" width="38" height="27" rx="3"/><path d="M5 14 L24 28 L43 14"/><circle class="kh-f-rani" cx="24" cy="28" r="4.5" stroke-width="2"/></svg></span><div><strong>A new set of riddles is ready.</strong> Open it whenever you like. It will be here.</div></div>
+        <div class="kh-notice kh-notice--note"><span class="kh-notice__glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="kulhad"><path class="kh-f-kesar" d="M10 18 H38 L34 41 Q24 45 14 41 Z"/><ellipse class="kh-f-genda" cx="24" cy="18" rx="14" ry="4"/><path d="M20 11 C17 8 23 6 20 3 M28 11 C31 8 25 6 28 3" stroke-width="2"/></svg></span><div><strong>That one didn’t save.</strong> Nothing is lost. Try again when you’re ready.</div><div class="kh-notice__actions"><button class="kh-btn kh-btn--sm" type="button">Try again</button></div></div>
+      </div>
+      <p class="kh-body kh-secondary">Notices live in the page where the person caused them. They are never toasts, never modals and never announced assertively.</p>
+    </section>
+
+    <section class="sec" id="finite">
+      <p class="kh-caps">Finite play</p>
+      <h2 class="kh-h2">Progress that ends</h2>
+      <p class="kh-body"><code>.kh-steps</code> shows where you are in a <em>finite</em> set, with the total always in view. <code>.kh-end</code> is the ending: rest, not loss. Try it.</p>
+      <div class="kh-card">
+        <div class="finite" data-finite data-total="5">
+          <div class="row"><ol class="kh-steps" aria-label="Progress">
+            <li aria-current="step"><span class="kh-visually-hidden">Word 1</span></li>
+            <li><span class="kh-visually-hidden">Word 2</span></li>
+            <li><span class="kh-visually-hidden">Word 3</span></li>
+            <li><span class="kh-visually-hidden">Word 4</span></li>
+            <li><span class="kh-visually-hidden">Word 5</span></li>
+          </ol><span class="kh-steps__label" data-finite-label>1 of 5</span></div>
+          <div class="finite__stage">
+            <div class="kh-band kh-band--genda finite__card"><p class="kh-h2">आम · Mango</p><p class="kh-body">Word 1 of 5</p></div>
+            <div class="kh-band kh-band--rani finite__card" hidden><p class="kh-h2">पतंग · Kite</p><p class="kh-body">Word 2 of 5</p></div>
+            <div class="kh-band kh-band--firozi finite__card" hidden><p class="kh-h2">चाय · Chai</p><p class="kh-body">Word 3 of 5</p></div>
+            <div class="kh-band kh-band--mor finite__card" hidden><p class="kh-h2">मोर · Peacock</p><p class="kh-body">Word 4 of 5</p></div>
+            <div class="kh-band kh-band--genda finite__card" hidden><p class="kh-h2">तारा · Star</p><p class="kh-body">Word 5 of 5</p></div>
+            <div class="kh-end" hidden data-finite-end>
+              <p class="kh-end__mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chand"><path class="kh-f-genda" d="M28 6 A18 18 0 1 0 42 34 A14 14 0 0 1 28 6 Z"/><path class="kh-f-genda" d="M38 6 L39.6 10.4 L44 12 L39.6 13.6 L38 18 L36.4 13.6 L32 12 L36.4 10.4 Z" stroke-width="2"/></svg></p>
+              <h3 class="kh-h3">That’s all five.</h3>
+              <p class="kh-body">Nice work. There’s no more today, and that’s the point.</p>
+              <div class="row row--center"><button class="kh-btn kh-btn--ghost" type="button" data-finite-restart>Go through again</button></div>
+            </div>
+          </div>
+          <div class="row"><button class="kh-btn" type="button" data-finite-next>Next</button></div>
+        </div>
+      </div>
+      <div class="snippet"><pre tabindex="0"><code>&lt;ol class=&quot;kh-steps&quot; aria-label=&quot;Progress&quot;&gt;
+  &lt;li data-done&gt;&lt;/li&gt;&lt;li aria-current=&quot;step&quot;&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;span class=&quot;kh-steps__label&quot;&gt;2 of 3&lt;/span&gt;
+&lt;div class=&quot;kh-end&quot;&gt;…That’s all…&lt;/div&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+    </section>
+
+    <section class="sec" id="playground">
+      <p class="kh-caps">Playground</p>
+      <h2 class="kh-h2">A rangoli, for nothing</h2>
+      <p class="kh-body">Tap dots to paint them. There is no score, no timer and no “share to unlock”. When it looks nice, you’re done.</p>
+      <div class="kh-card">
+        <div class="rangoli" data-rangoli>
+          <div class="rangoli__palette" role="group" aria-label="Paint color">
+            <button class="kh-chip" type="button" data-paint="genda" aria-pressed="true">Genda</button>
+            <button class="kh-chip" type="button" data-paint="rani" aria-pressed="false">Rani</button>
+            <button class="kh-chip" type="button" data-paint="firozi" aria-pressed="false">Firozi</button>
+            <button class="kh-chip" type="button" data-paint="tota" aria-pressed="false">Tota</button>
+          </div>
+          <div class="rangoli__grid kh-dots" role="group" aria-label="Rangoli, 7 by 7">
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 1, 7" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 2, 7" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 3, 7" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 4, 7" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 5, 7" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 6, 7" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 1" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 2" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 3" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 4" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 5" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 6" aria-pressed="false"></button>
+            <button class="rangoli__dot" type="button" aria-label="Dot 7, 7" aria-pressed="false"></button>
+          </div>
+          <div class="row"><button class="kh-btn kh-btn--sm kh-btn--ghost" type="button" data-rangoli-clear>Start again</button></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-foot">
+    <span class="kh-toran" aria-hidden="true"></span>
+    <p class="kh-caption">Khelo Design System v0.1.0 · MIT · fonts under SIL OFL-1.1</p>
+    <p class="kh-caption">No analytics. No cookies. Nothing here is loaded over a network, and nothing here wants you to stay.</p>
+  </footer>
+</div>
+<script src="site.js"></script>
+</body>
+</html>

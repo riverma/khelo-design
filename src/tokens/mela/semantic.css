@@ -1,0 +1,53 @@
+/* Khelo Mela — semantic tokens. The only layer components read.
+   Contrast figures are produced by tools/check-contrast.mjs; run it with
+   --report to see every pair. */
+
+.khelo-mela {
+  color-scheme: light;
+
+  --surface-canvas-flat: var(--paper-100);
+  --surface-elevated:    var(--paper-50);
+  --surface-sunk:        var(--paper-200);
+
+  --text-heading:   var(--kajal-900);
+  --text-body:      var(--kajal-900);
+  --text-secondary: var(--kajal-700);
+  --text-muted:     var(--kajal-500);   /* non-text: rules, dots, idle glyphs */
+  --text-inverse:   var(--paper-50);
+
+  --border-control: var(--kajal-900);   /* the painter's outline */
+  --border-soft:    var(--paper-300);   /* decorative separator */
+  --focus-ring:     var(--mor-500);
+
+  /* The primary action is a marigold sticker with an ink outline. */
+  --accent-primary:    var(--marigold-500);
+  --on-primary:        var(--kajal-900);
+  /* A second loud voice for "let's go" moments. */
+  --accent-play:       var(--rani-700);
+  --on-play:           var(--paper-50);
+  --accent-secondary:  var(--mor-500);  /* links */
+  --accent-calm:       var(--firozi-700);
+  --accent-done:       var(--tota-700); /* finished, not "winning" */
+  --accent-note:       var(--kesar-700);/* needs a look — never red */
+
+  /* Soft washes for tiles and chips. */
+  --wash-genda:  var(--marigold-100);
+  --wash-rani:   var(--rani-100);
+  --wash-firozi: var(--firozi-100);
+  --wash-tota:   var(--tota-100);
+  --wash-mor:    var(--mor-100);
+  --wash-haldi:  var(--haldi-100);
+
+  --selected-fill: var(--haldi-500);
+  --on-selected:   var(--kajal-900);
+}
+
+.khelo-mela {
+  /* Icon fills. */
+  --icon-genda:  var(--marigold-500);
+  --icon-kesar:  var(--kesar-500);
+  --icon-rani:   var(--rani-500);
+  --icon-firozi: var(--firozi-500);
+  --icon-tota:   var(--tota-500);
+  --icon-mor:    var(--mor-500);
+}

@@ -1,0 +1,39 @@
+/* Khelo — forms. Thick edges, big targets, warm words. */
+
+.kh-field { display: grid; gap: var(--space-2); }
+.kh-label { font-weight: 800; color: var(--text-body); }
+.kh-hint  { font-size: var(--size-caption); color: var(--text-secondary); }
+
+.kh-input {
+  min-height: 48px;
+  width: 100%;
+  padding: 0.6rem 0.95rem;
+  border: var(--stroke-bold) solid var(--border-control);
+  border-radius: var(--radius-m);
+  background: var(--surface-elevated);
+  color: var(--text-body);
+  box-shadow: inset 3px 3px 0 var(--surface-sunk);
+}
+.kh-input::placeholder { color: var(--text-secondary); opacity: 0.8; }
+/* Something to look at, never an accusation: no red, no shaking. */
+.kh-input[aria-invalid="true"] { border-style: dashed; border-color: var(--accent-note); }
+
+/* A switch. A real checkbox underneath, so it is a checkbox to everyone. */
+.kh-switch { display: inline-flex; align-items: center; gap: var(--space-3); cursor: pointer; font-weight: 700; min-height: var(--hit); }
+.kh-switch input {
+  appearance: none; -webkit-appearance: none; margin: 0;
+  width: 3.25rem; height: 1.85rem; flex: none;
+  border: var(--stroke-bold) solid var(--border-control);
+  border-radius: var(--radius-pill);
+  background: var(--surface-sunk);
+  position: relative; cursor: pointer;
+  transition: background-color var(--dur-settle) var(--ease-settle);
+}
+.kh-switch input::before {
+  content: ''; position: absolute; top: 2px; left: 2px;
+  width: 1.2rem; height: 1.2rem; border-radius: 50%;
+  background: var(--border-control);
+  transition: transform var(--dur-settle) var(--ease-settle);
+}
+.kh-switch input:checked { background: var(--accent-done); }
+.kh-switch input:checked::before { transform: translateX(1.4rem); background: var(--surface-elevated); }

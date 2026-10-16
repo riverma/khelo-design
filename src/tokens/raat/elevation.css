@@ -1,0 +1,35 @@
+/* Khelo Raat — elevation. A dark shadow vanishes on a dark sky, so Raat's
+   offset is colored: the pink echo of a neon sign on the wall behind it. */
+
+.khelo-raat {
+  --sticker-ink: var(--rani-300);
+  --shadow-sticker-s: 2px 2px 0 var(--sticker-ink);
+  --shadow-sticker:   4px 4px 0 var(--sticker-ink);
+  --shadow-sticker-l: 6px 6px 0 var(--sticker-ink);
+  --shadow-pressed:   1px 1px 0 var(--sticker-ink);
+
+  /* Block lettering for big titles. Lamplit letters with a pink side:
+     the same block, as a lit sign.
+     The letter face is solid; the extrusion runs down and right, 0.08em
+     deep: present, not towering. */
+  --block-face: var(--lamp-50);
+  --block-side: var(--rani-500);
+  --block-base: var(--rani-700);
+  --shadow-block:
+    0.01em 0.01em 0 var(--block-side),
+    0.02em 0.02em 0 var(--block-side),
+    0.03em 0.03em 0 var(--block-side),
+    0.04em 0.04em 0 var(--block-side),
+    0.05em 0.05em 0 var(--block-side),
+    0.06em 0.06em 0 var(--block-base),
+    0.07em 0.07em 0 var(--block-base),
+    0.08em 0.08em 0 var(--block-base);
+  /* The same block in the ink's own color at low strength, for titles
+     set on a poster band, which already carries the color. */
+  --shadow-block-quiet:
+    0.01em 0.01em 0 color-mix(in srgb, currentColor 14%, transparent),
+    0.02em 0.02em 0 color-mix(in srgb, currentColor 14%, transparent),
+    0.03em 0.03em 0 color-mix(in srgb, currentColor 14%, transparent),
+    0.04em 0.04em 0 color-mix(in srgb, currentColor 14%, transparent),
+    0.05em 0.05em 0 color-mix(in srgb, currentColor 14%, transparent);
+}

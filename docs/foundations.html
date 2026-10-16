@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="khelo-mela">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf0d9">
+<meta name="color-scheme" content="light dark">
+<title>Foundations — Khelo Design System</title>
+<meta name="description" content="Color, type, shadow, pattern and motion in Khelo.">
+<link rel="stylesheet" href="khelo.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="kh-canvas">
+<a class="kh-visually-hidden" href="#main">Skip to content</a>
+<span class="kh-kangura" aria-hidden="true"></span>
+<div class="site">
+  <header class="site-head">
+    <a class="site-mark kh-sign" href="index.html">Khelo <span lang="hi">खेलो</span></a>
+    <nav class="site-nav" aria-label="Sections">
+      <a class="kh-link kh-link--quiet" href="index.html">Overview</a>
+      <a class="kh-link kh-link--quiet" href="principles.html">Principles</a>
+      <a class="kh-link kh-link--quiet" href="foundations.html" aria-current="page">Foundations</a>
+      <a class="kh-link kh-link--quiet" href="components.html">Components</a>
+      <a class="kh-link kh-link--quiet" href="agents.html">For agents</a>
+    </nav>
+    <div class="theme-switch" role="group" aria-label="Aesthetic">
+      <button class="kh-chip" type="button" data-theme-btn="mela" aria-pressed="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--s" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="surya"><circle class="kh-f-genda" cx="24" cy="24" r="9"/><path d="M38.0 24.0 L44.0 24.0"/><path d="M33.9 33.9 L38.1 38.1"/><path d="M24.0 38.0 L24.0 44.0"/><path d="M14.1 33.9 L9.9 38.1"/><path d="M10.0 24.0 L4.0 24.0"/><path d="M14.1 14.1 L9.9 9.9"/><path d="M24.0 10.0 L24.0 4.0"/><path d="M33.9 14.1 L38.1 9.9"/></svg> Mela</button>
+      <button class="kh-chip" type="button" data-theme-btn="raat" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--s" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chand"><path class="kh-f-genda" d="M28 6 A18 18 0 1 0 42 34 A14 14 0 0 1 28 6 Z"/><path class="kh-f-genda" d="M38 6 L39.6 10.4 L44 12 L39.6 13.6 L38 18 L36.4 13.6 L32 12 L36.4 10.4 Z" stroke-width="2"/></svg> Raat</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero hero--slim">
+      <div class="hero__copy">
+        <span class="kh-sticker kh-sticker--firozi">the paint box</span>
+        <h1 class="kh-poster">Foundations</h1>
+        <p class="kh-lead">Seven truck-art hues, two grounds, three faces, block lettering, drawn art, one kind of shadow, five borders and one motion.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="color">
+      <p class="kh-caps">Color</p>
+      <h2 class="kh-h2">Seven hues, painted twice</h2>
+      <p class="kh-body">Each hue has a Hindi name and a ramp. In <strong>Mela</strong>, 100 is a pale wash and 700 is a deep shade that holds text on paper. In <strong>Raat</strong> the ramp turns over: 100 is a dim wash for a night surface and 500 is the lamp-lit glow. Components never use a step directly; they read semantic tokens such as <code>--accent-primary</code> and <code>--wash-genda</code>.</p>
+      <div class="hues">
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Genda</span> <span class="kh-caption">marigold · <code>--marigold-*</code></span><p class="kh-caption">The garland. The primary sticker.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Genda, Mela"><div class="sw" style="background:#fae2b2;color:#2a1840"><span>100</span><code>#fae2b2</code></div><div class="sw" style="background:#f8c662;color:#2a1840"><span>300</span><code>#f8c662</code></div><div class="sw" style="background:#f5a300;color:#2a1840"><span>500</span><code>#f5a300</code></div><div class="sw" style="background:#a36b10;color:#fff9ee"><span>700</span><code>#a36b10</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Genda, Raat"><div class="sw" style="background:#3e2f3b;color:#fff9ee"><span>100</span><code>#3e2f3b</code></div><div class="sw" style="background:#95703c;color:#fff9ee"><span>300</span><code>#95703c</code></div><div class="sw" style="background:#ffbe3d;color:#2a1840"><span>500</span><code>#ffbe3d</code></div><div class="sw" style="background:#785a2d;color:#fff9ee"><span>700</span><code>#785a2d</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Haldi</span> <span class="kh-caption">turmeric · <code>--haldi-*</code></span><p class="kh-caption">Selection: what you picked.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Haldi, Mela"><div class="sw" style="background:#faeab7;color:#2a1840"><span>100</span><code>#faeab7</code></div><div class="sw" style="background:#f9de72;color:#2a1840"><span>300</span><code>#f9de72</code></div><div class="sw" style="background:#f7cf1d;color:#2a1840"><span>500</span><code>#f7cf1d</code></div><div class="sw" style="background:#a48622;color:#2a1840"><span>700</span><code>#a48622</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Haldi, Raat"><div class="sw" style="background:#3e3643;color:#fff9ee"><span>100</span><code>#3e3643</code></div><div class="sw" style="background:#958354;color:#2a1840"><span>300</span><code>#958354</code></div><div class="sw" style="background:#ffe16a;color:#2a1840"><span>500</span><code>#ffe16a</code></div><div class="sw" style="background:#786a41;color:#fff9ee"><span>700</span><code>#786a41</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Kesar</span> <span class="kh-caption">saffron · <code>--kesar-*</code></span><p class="kh-caption">A thing that needs a look. Never alarm.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Kesar, Mela"><div class="sw" style="background:#f9d8b7;color:#2a1840"><span>100</span><code>#f9d8b7</code></div><div class="sw" style="background:#f5a671;color:#2a1840"><span>300</span><code>#f5a671</code></div><div class="sw" style="background:#f06a1c;color:#2a1840"><span>500</span><code>#f06a1c</code></div><div class="sw" style="background:#9f4721;color:#fff9ee"><span>700</span><code>#9f4721</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Kesar, Raat"><div class="sw" style="background:#3e263d;color:#fff9ee"><span>100</span><code>#3e263d</code></div><div class="sw" style="background:#955344;color:#fff9ee"><span>300</span><code>#955344</code></div><div class="sw" style="background:#ff8a4c;color:#2a1840"><span>500</span><code>#ff8a4c</code></div><div class="sw" style="background:#784334;color:#fff9ee"><span>700</span><code>#784334</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Rani</span> <span class="kh-caption">hot pink · <code>--rani-*</code></span><p class="kh-caption">The loud voice: “let’s go”.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Rani, Mela"><div class="sw" style="background:#f5cac9;color:#2a1840"><span>100</span><code>#f5cac9</code></div><div class="sw" style="background:#e87ba8;color:#2a1840"><span>300</span><code>#e87ba8</code></div><div class="sw" style="background:#d81b7f;color:#fff9ee"><span>500</span><code>#d81b7f</code></div><div class="sw" style="background:#91165f;color:#fff9ee"><span>700</span><code>#91165f</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Rani, Raat"><div class="sw" style="background:#3e1e4f;color:#fff9ee"><span>100</span><code>#3e1e4f</code></div><div class="sw" style="background:#953b7b;color:#fff9ee"><span>300</span><code>#953b7b</code></div><div class="sw" style="background:#ff5fb0;color:#2a1840"><span>500</span><code>#ff5fb0</code></div><div class="sw" style="background:#782f61;color:#fff9ee"><span>700</span><code>#782f61</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Firozi</span> <span class="kh-caption">turquoise · <code>--firozi-*</code></span><p class="kh-caption">Calm, cool panels.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Firozi, Mela"><div class="sw" style="background:#d1e3cf;color:#2a1840"><span>100</span><code>#d1e3cf</code></div><div class="sw" style="background:#7ac8bc;color:#2a1840"><span>300</span><code>#7ac8bc</code></div><div class="sw" style="background:#11a8a4;color:#2a1840"><span>500</span><code>#11a8a4</code></div><div class="sw" style="background:#156e76;color:#fff9ee"><span>700</span><code>#156e76</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Firozi, Raat"><div class="sw" style="background:#1c3555;color:#fff9ee"><span>100</span><code>#1c3555</code></div><div class="sw" style="background:#2c828d;color:#fff9ee"><span>300</span><code>#2c828d</code></div><div class="sw" style="background:#3fe0d0;color:#2a1840"><span>500</span><code>#3fe0d0</code></div><div class="sw" style="background:#22696f;color:#fff9ee"><span>700</span><code>#22696f</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Tota</span> <span class="kh-caption">parrot green · <code>--tota-*</code></span><p class="kh-caption">Done. Finished, not “winning”.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Tota, Mela"><div class="sw" style="background:#dce3ba;color:#2a1840"><span>100</span><code>#dce3ba</code></div><div class="sw" style="background:#9cc879;color:#2a1840"><span>300</span><code>#9cc879</code></div><div class="sw" style="background:#4fa82a;color:#2a1840"><span>500</span><code>#4fa82a</code></div><div class="sw" style="background:#3c6e2a;color:#fff9ee"><span>700</span><code>#3c6e2a</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Tota, Raat"><div class="sw" style="background:#2b3541;color:#fff9ee"><span>100</span><code>#2b3541</code></div><div class="sw" style="background:#5a824f;color:#fff9ee"><span>300</span><code>#5a824f</code></div><div class="sw" style="background:#93e060;color:#2a1840"><span>500</span><code>#93e060</code></div><div class="sw" style="background:#48693d;color:#fff9ee"><span>700</span><code>#48693d</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Mor</span> <span class="kh-caption">peacock blue · <code>--mor-*</code></span><p class="kh-caption">Links and focus.</p></div>
+          <div class="hue__ramps">
+            <div class="ramp khelo-mela" aria-label="Mor, Mela"><div class="sw" style="background:#d2d6d2;color:#2a1840"><span>100</span><code>#d2d6d2</code></div><div class="sw" style="background:#7da1c2;color:#2a1840"><span>300</span><code>#7da1c2</code></div><div class="sw" style="background:#1660b0;color:#fff9ee"><span>500</span><code>#1660b0</code></div><div class="sw" style="background:#18417d;color:#fff9ee"><span>700</span><code>#18417d</code></div></div>
+            <div class="ramp khelo-raat" aria-label="Mor, Raat"><div class="sw" style="background:#252d5d;color:#fff9ee"><span>100</span><code>#252d5d</code></div><div class="sw" style="background:#4869a6;color:#fff9ee"><span>300</span><code>#4869a6</code></div><div class="sw" style="background:#72b2ff;color:#2a1840"><span>500</span><code>#72b2ff</code></div><div class="sw" style="background:#395484;color:#fff9ee"><span>700</span><code>#395484</code></div></div>
+          </div>
+        </div>
+        <div class="hue">
+          <div class="hue__name"><span class="kh-sign">Grounds and ink</span><p class="kh-caption">Mela: paper and kajal (aubergine, not black). Raat: lamplight on neel sky (not white on black).</p></div>
+          <div class="hue__ramps">
+            <div class="ramp ramp--8"><div class="sw" style="background:#fff9ee;color:#2a1840"><span>paper-50</span><code>#fff9ee</code></div><div class="sw" style="background:#fbf0d9;color:#2a1840"><span>paper-100</span><code>#fbf0d9</code></div><div class="sw" style="background:#f4e4c4;color:#2a1840"><span>paper-200</span><code>#f4e4c4</code></div><div class="sw" style="background:#e8d2a8;color:#2a1840"><span>paper-300</span><code>#e8d2a8</code></div><div class="sw" style="background:#a796ab;color:#2a1840"><span>kajal-300</span><code>#a796ab</code></div><div class="sw" style="background:#75637f;color:#fff9ee"><span>kajal-500</span><code>#75637f</code></div><div class="sw" style="background:#4a3a5c;color:#fff9ee"><span>kajal-700</span><code>#4a3a5c</code></div><div class="sw" style="background:#2a1840;color:#fff9ee"><span>kajal-900</span><code>#2a1840</code></div></div>
+            <div class="ramp ramp--8"><div class="sw" style="background:#fbefd6;color:#2a1840"><span>lamp-50</span><code>#fbefd6</code></div><div class="sw" style="background:#e9e2f4;color:#2a1840"><span>lamp-100</span><code>#e9e2f4</code></div><div class="sw" style="background:#c9c0e2;color:#2a1840"><span>lamp-300</span><code>#c9c0e2</code></div><div class="sw" style="background:#8e86b8;color:#2a1840"><span>lamp-500</span><code>#8e86b8</code></div><div class="sw" style="background:#2b2566;color:#fff9ee"><span>sky-700</span><code>#2b2566</code></div><div class="sw" style="background:#1e1950;color:#fff9ee"><span>sky-800</span><code>#1e1950</code></div><div class="sw" style="background:#14103a;color:#fff9ee"><span>sky-900</span><code>#14103a</code></div><div class="sw" style="background:#0c0928;color:#fff9ee"><span>sky-950</span><code>#0c0928</code></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="kh-body kh-secondary">Every pair of ink and ground, every filled control and every poster band at every gradient stop is measured by <code>tools/check-contrast.mjs</code>. Loud is allowed. Unreadable is not.</p>
+    </section>
+
+    <section class="sec" id="bands">
+      <p class="kh-caps">Poster bands</p>
+      <h2 class="kh-h2">Big fields of color, ink included</h2>
+      <p class="kh-body">A band is a large, still poster surface that carries its own measured ink. Use one behind a headline or a short line, not behind long reading.</p>
+      <div class="grid2">
+        <div class="kh-band kh-band--genda"><p class="kh-h2">Genda</p><p class="kh-body"><code>.kh-band--genda</code></p></div>
+        <div class="kh-band kh-band--rani"><p class="kh-h2">Rani</p><p class="kh-body"><code>.kh-band--rani</code></p></div>
+        <div class="kh-band kh-band--firozi"><p class="kh-h2">Firozi</p><p class="kh-body"><code>.kh-band--firozi</code></p></div>
+        <div class="kh-band kh-band--mor"><p class="kh-h2">Mor</p><p class="kh-body"><code>.kh-band--mor</code></p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="type">
+      <p class="kh-caps">Type</p>
+      <h2 class="kh-h2">The poster, the sign painter and the reader</h2>
+      <div class="type-specimen kh-card">
+        <p class="kh-caps">Rozha One · display · <code>--font-display</code></p>
+        <p class="kh-poster">Dil Se Khelo</p>
+        <p class="kh-poster" lang="hi">दिल से खेलो</p>
+        <p class="kh-body kh-secondary">A Bollywood-poster serif from the Indian Type Foundry. For a few words, large, in block lettering: a solid face on a painted extrusion that runs down and right (<code>--shadow-block</code>). Mela paints a kajal face on a marigold side with a burnt-saffron base; Raat lights the face and paints the side pink.</p>
+      </div>
+      <div class="type-specimen kh-card">
+        <p class="kh-caps">Yatra One · lettering · <code>--font-sign</code></p>
+        <p class="kh-h2 kh-sign">Horn OK Please · <span lang="hi">धीरे चलें</span></p>
+        <p class="kh-body kh-secondary">A sign painter’s hand, for stickers, tile titles and labels. Short, and never for paragraphs.</p>
+      </div>
+      <div class="type-specimen kh-card">
+        <p class="kh-caps">Baloo 2 · reading · <code>--font-body</code></p>
+        <p class="kh-lead">Everything you actually read is set in Baloo 2: rounded, warm, Devanagari-native.</p>
+        <p class="kh-lead" lang="hi">जो कुछ भी आप पढ़ते हैं, वह बालू में है — गोल, गरम, और देवनागरी में सहज।</p>
+        <p class="kh-body kh-secondary">Hindi is set as a peer of English, never as a translation footnote. The scale is in rem, so a person’s own text size setting always wins.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="illustration">
+      <p class="kh-caps">Illustration</p>
+      <h2 class="kh-h2">Draw it. Never an emoji.</h2>
+      <p class="kh-body">An emoji is drawn by someone else’s platform. It looks different on every device and brings that platform’s voice into yours. Khelo’s art is drawn in one hand: a 48-unit grid, an ink outline that follows the text color, round joins, and flat fills from the seven hues. The motifs come from everyday Indian play and life.</p>
+      <div class="icons">
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="patang"><path class="kh-f-rani" d="M24 4 L40 22 H8 Z"/><path class="kh-f-genda" d="M8 22 H40 L24 40 Z"/><path d="M24 4 V40"/><path d="M24 40 C20 43 28 44 24 47" stroke-width="2"/></svg><figcaption class="kh-caption"><code>patang</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="lattu"><path class="kh-f-rani" d="M8 20 Q24 8 40 20 L24 43 Z"/><path class="kh-f-genda" d="M10.5 23 Q24 13 37.5 23 L34.6 27.2 Q24 19 13.4 27.2 Z"/><path d="M24 12 V5 M24 43 V46"/><circle class="kh-f-firozi" cx="24" cy="4" r="2.2"/></svg><figcaption class="kh-caption"><code>lattu</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="kulhad"><path class="kh-f-kesar" d="M10 18 H38 L34 41 Q24 45 14 41 Z"/><ellipse class="kh-f-genda" cx="24" cy="18" rx="14" ry="4"/><path d="M20 11 C17 8 23 6 20 3 M28 11 C31 8 25 6 28 3" stroke-width="2"/></svg><figcaption class="kh-caption"><code>kulhad</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="genda"><path class="kh-f-genda" d="M18.64 7.5 A7 7 0 0 1 29.36 7.5 A7 7 0 0 1 38.04 13.8 A7 7 0 0 1 41.35 24 A7 7 0 0 1 38.04 34.2 A7 7 0 0 1 29.36 40.5 A7 7 0 0 1 18.64 40.5 A7 7 0 0 1 9.96 34.2 A7 7 0 0 1 6.65 24 A7 7 0 0 1 9.96 13.8 A7 7 0 0 1 18.64 7.5 Z"/><path d="M24 13.5 L24 9.5 M30.17 15.51 L32.52 12.27 M33.99 20.76 L37.79 19.52 M33.99 27.24 L37.79 28.48 M30.17 32.49 L32.52 35.73 M24 34.5 L24 38.5 M17.83 32.49 L15.48 35.73 M14.01 27.24 L10.21 28.48 M14.01 20.76 L10.21 19.52 M17.83 15.51 L15.48 12.27" stroke-width="1.6"/><circle class="kh-f-kesar" cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><figcaption class="kh-caption"><code>genda</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="kamal"><path class="kh-f-rani" d="M24 38 C14 37 7 30 4 20 C13 21 20 27 24 38 Z"/><path class="kh-f-rani" d="M24 38 C34 37 41 30 44 20 C35 21 28 27 24 38 Z"/><path class="kh-f-rani" d="M24 6 C31 14 31 28 24 38 C17 28 17 14 24 6 Z"/><path class="kh-f-tota" d="M6 42 C14 38 34 38 42 42 C34 45 14 45 6 42 Z"/></svg><figcaption class="kh-caption"><code>kamal</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="morpankh"><path d="M24 47 C25 38 23 32 24 28" /><ellipse class="kh-f-tota" cx="24" cy="17" rx="12" ry="14"/><ellipse class="kh-f-genda" cx="24" cy="19" rx="8" ry="9.5"/><ellipse class="kh-f-mor" cx="24" cy="20.5" rx="4.6" ry="5.6"/><path d="M12 25 L6 30 M36 25 L42 30 M14 29 L9 35 M34 29 L39 35" stroke-width="2"/></svg><figcaption class="kh-caption"><code>morpankh</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="dhol"><path class="kh-f-rani" d="M10 14 C18 10 30 10 38 14 V34 C30 38 18 38 10 34 Z"/><path d="M14 13 L19 35 L24 12.5 L29 35 L34 13" stroke-width="1.8"/><ellipse class="kh-f-genda" cx="10" cy="24" rx="4" ry="10"/><ellipse class="kh-f-genda" cx="38" cy="24" rx="4" ry="10"/></svg><figcaption class="kh-caption"><code>dhol</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="rangoli"><path class="kh-f-rani" transform="rotate(0 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(90 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(180 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-rani" transform="rotate(270 24 24)" d="M24 19 C18 14 18 7 24 3 C30 7 30 14 24 19 Z"/><path class="kh-f-firozi" transform="rotate(45 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(135 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(225 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><path class="kh-f-firozi" transform="rotate(315 24 24)" d="M24 18 C21 15 21 11 24 8 C27 11 27 15 24 18 Z"/><circle class="kh-f-genda" cx="24" cy="24" r="5.5"/><circle cx="37.4" cy="37.4" r="1.6" fill="currentColor" stroke="none"/><circle cx="10.6" cy="37.4" r="1.6" fill="currentColor" stroke="none"/><circle cx="10.6" cy="10.6" r="1.6" fill="currentColor" stroke="none"/><circle cx="37.4" cy="10.6" r="1.6" fill="currentColor" stroke="none"/></svg><figcaption class="kh-caption"><code>rangoli</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="nazar"><path class="kh-f-mor" d="M4 24 C12 12 36 12 44 24 C36 36 12 36 4 24 Z"/><circle class="kh-f-firozi" cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="3.5" fill="currentColor"/></svg><figcaption class="kh-caption"><code>nazar</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chitthi"><rect class="kh-f-firozi" x="5" y="11" width="38" height="27" rx="3"/><path d="M5 14 L24 28 L43 14"/><circle class="kh-f-rani" cx="24" cy="28" r="4.5" stroke-width="2"/></svg><figcaption class="kh-caption"><code>chitthi</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="surya"><circle class="kh-f-genda" cx="24" cy="24" r="9"/><path d="M38.0 24.0 L44.0 24.0"/><path d="M33.9 33.9 L38.1 38.1"/><path d="M24.0 38.0 L24.0 44.0"/><path d="M14.1 33.9 L9.9 38.1"/><path d="M10.0 24.0 L4.0 24.0"/><path d="M14.1 14.1 L9.9 9.9"/><path d="M24.0 10.0 L24.0 4.0"/><path d="M33.9 14.1 L38.1 9.9"/></svg><figcaption class="kh-caption"><code>surya</code></figcaption></figure>
+        <figure class="kh-card kh-card--flat icon-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="kh-icon kh-icon--xl" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-name="chand"><path class="kh-f-genda" d="M28 6 A18 18 0 1 0 42 34 A14 14 0 0 1 28 6 Z"/><path class="kh-f-genda" d="M38 6 L39.6 10.4 L44 12 L39.6 13.6 L38 18 L36.4 13.6 L32 12 L36.4 10.4 Z" stroke-width="2"/></svg><figcaption class="kh-caption"><code>chand</code></figcaption></figure>
+      </div>
+      <p class="kh-body kh-secondary">Fills come from <code>--icon-genda</code>, <code>--icon-rani</code> and the rest, so the same file is painted by day and lamplit by night. Decorative art is <code>aria-hidden</code>; meaning lives in the words next to it. Drawing a new one? Keep the outline, keep the fills flat, keep it to two or three hues, and draw something a person in India would have played with or seen today.</p>
+      <div class="snippet"><pre tabindex="0"><code>&lt;svg class=&quot;kh-icon&quot; viewBox=&quot;0 0 48 48&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;
+     stroke-width=&quot;2.5&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;path class=&quot;kh-f-rani&quot;  d=&quot;M24 4 L40 22 H8 Z&quot;/&gt;
+  &lt;path class=&quot;kh-f-genda&quot; d=&quot;M8 22 H40 L24 40 Z&quot;/&gt;
+&lt;/svg&gt;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+    </section>
+
+    <section class="sec" id="shadow">
+      <p class="kh-caps">Shadow</p>
+      <h2 class="kh-h2">Stickers, not clouds</h2>
+      <p class="kh-body">Khelo has one kind of shadow: a hard offset with no blur, like a sticker on a truck panel. A blurred shadow says “floating, look at me”. A sticker says “here, solid, yours”. In Raat a dark shadow would vanish on the sky, so the offset glows pink like neon on a wall.</p>
+      <div class="row row--gap">
+        <div class="kh-card shadow-demo" style="box-shadow:var(--shadow-sticker-s)"><code>--shadow-sticker-s</code></div>
+        <div class="kh-card shadow-demo" style="box-shadow:var(--shadow-sticker)"><code>--shadow-sticker</code></div>
+        <div class="kh-card shadow-demo" style="box-shadow:var(--shadow-sticker-l)"><code>--shadow-sticker-l</code></div>
+        <div class="kh-card shadow-demo" style="box-shadow:var(--shadow-pressed)"><code>--shadow-pressed</code></div>
+      </div>
+    </section>
+
+    <section class="sec" id="pattern">
+      <p class="kh-caps">Ornament</p>
+      <h2 class="kh-h2">Painted edges</h2>
+      <p class="kh-body">Borders from Indian ornament, as static SVG inlined as tokens. They frame edges and fill empty grounds. They never sit behind body text, they never move, and they drop out in forced colors.</p>
+      <div class="patterns">
+        <div class="kh-card"><span class="kh-kangura" aria-hidden="true"></span><p class="kh-body"><code>.kh-kangura</code> · the stepped temple border of a Kanjeevaram sari’s edge and a truck’s roofline</p></div>
+        <div class="kh-card"><span class="kh-bel" aria-hidden="true"></span><p class="kh-body"><code>.kh-bel</code> · the flowering vine on a truck’s side panels</p></div>
+        <div class="kh-card"><span class="kh-toran" aria-hidden="true"></span><p class="kh-body"><code>.kh-toran</code> · mango leaves and marigolds strung over a doorway</p></div>
+        <div class="kh-card"><span class="kh-lights" aria-hidden="true"></span><p class="kh-body"><code>.kh-lights</code> · bulbs on a wire, made for Raat</p></div>
+        <div class="kh-card kh-dots dots-demo"><p class="kh-body"><code>.kh-dots</code> · the grid a rangoli is drawn on</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="motion">
+      <p class="kh-caps">Motion</p>
+      <h2 class="kh-h2">The squish</h2>
+      <p class="kh-body">Press any button on this page. It sinks into its shadow in 110ms and comes back when you let go. That is the whole motion vocabulary: it answers a touch, it is over before you notice it, and the curve ends at exactly 1.0. Nothing bounces, wobbles, pulses or loops. With reduced motion turned on, it simply doesn’t move.</p>
+      <div class="row row--gap">
+        <button class="kh-btn kh-btn--lg" type="button">Press me</button>
+        <button class="kh-btn kh-btn--lg kh-btn--play" type="button">And me</button>
+      </div>
+      <div class="snippet"><pre tabindex="0"><code>--ease-squish: cubic-bezier(0.25, 0.8, 0.3, 1);
+--dur-press: 110ms;
+--dur-settle: 220ms;</code></pre><button class="kh-btn kh-btn--sm kh-btn--ghost snippet__copy" type="button" data-copy>Copy</button></div>
+    </section>
+
+  </main>
+  <footer class="site-foot">
+    <span class="kh-toran" aria-hidden="true"></span>
+    <p class="kh-caption">Khelo Design System v0.1.0 · MIT · fonts under SIL OFL-1.1</p>
+    <p class="kh-caption">No analytics. No cookies. Nothing here is loaded over a network, and nothing here wants you to stay.</p>
+  </footer>
+</div>
+<script src="site.js"></script>
+</body>
+</html>

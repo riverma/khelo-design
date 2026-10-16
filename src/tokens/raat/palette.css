@@ -1,0 +1,58 @@
+/* Khelo Raat — raw palette.
+   The fair after dark: the same truck-art hues, lit from inside like
+   strings of bulbs, on a deep neel (indigo) sky. In Raat the ramp reads
+   the other way: 100 is a dim wash for a surface, 500 is the glow. */
+
+.khelo-raat {
+  /* Night sky and lamplight. Not black; not white. */
+  --sky-950: #0c0928;
+  --sky-900: #14103a;
+  --sky-800: #1e1950;
+  --sky-700: #2b2566;
+  --lamp-500: #8e86b8;
+  --lamp-300: #c9c0e2;
+  --lamp-100: #e9e2f4;
+  --lamp-50:  #fbefd6;
+
+  /* Genda · marigold */
+  --marigold-100: #3e2f3b;
+  --marigold-300: #95703c;
+  --marigold-500: #ffbe3d;
+  --marigold-700: #785a2d;
+
+  /* Rani · hot pink */
+  --rani-100: #3e1e4f;
+  --rani-300: #953b7b;
+  --rani-500: #ff5fb0;
+  --rani-700: #782f61;
+
+  /* Firozi · turquoise */
+  --firozi-100: #1c3555;
+  --firozi-300: #2c828d;
+  --firozi-500: #3fe0d0;
+  --firozi-700: #22696f;
+
+  /* Tota · parrot green */
+  --tota-100: #2b3541;
+  --tota-300: #5a824f;
+  --tota-500: #93e060;
+  --tota-700: #48693d;
+
+  /* Kesar · saffron orange */
+  --kesar-100: #3e263d;
+  --kesar-300: #955344;
+  --kesar-500: #ff8a4c;
+  --kesar-700: #784334;
+
+  /* Mor · peacock blue */
+  --mor-100: #252d5d;
+  --mor-300: #4869a6;
+  --mor-500: #72b2ff;
+  --mor-700: #395484;
+
+  /* Haldi · turmeric yellow */
+  --haldi-100: #3e3643;
+  --haldi-300: #958354;
+  --haldi-500: #ffe16a;
+  --haldi-700: #786a41;
+}

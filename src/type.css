@@ -1,0 +1,57 @@
+/* Khelo — type. One set of faces for both aesthetics.
+
+   The poster voice (Rozha One) is for a few words at a time, large, in
+   block lettering: a solid face with a painted extrusion. The
+   sign voice (Yatra One) is for labels that want a painted hand. Everything
+   you actually read is Baloo 2. A face that shouts is a face you read
+   three words of; that is the deal. */
+
+.kh-poster {
+  font-family: var(--font-display);
+  font-size: var(--size-poster);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--block-face);
+  text-shadow: var(--shadow-block);
+  margin: 0;
+  /* Room for the extrusion, so it never collides with the next line. */
+  padding-bottom: 0.08em;
+  text-wrap: balance;
+}
+.kh-h1, .kh-h2, .kh-h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--text-heading);
+  line-height: var(--leading-tight);
+  margin: 0;
+  text-wrap: balance;
+}
+.kh-h1 { font-size: var(--size-h1); }
+/* Any heading can take the block. Keep it to one per view. */
+.kh-block { color: var(--block-face); text-shadow: var(--shadow-block); padding-bottom: 0.08em; }
+.kh-h2 { font-size: var(--size-h2); }
+.kh-h3 { font-size: var(--size-h3); line-height: 1.15; }
+
+.kh-sign {
+  font-family: var(--font-sign);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.kh-lead {
+  font-size: var(--size-lead);
+  line-height: 1.45;
+  color: var(--text-body);
+  max-width: var(--measure);
+}
+.kh-body { font-size: var(--size-body); max-width: var(--measure); }
+.kh-secondary { color: var(--text-secondary); }
+.kh-caption { font-size: var(--size-caption); color: var(--text-secondary); }
+.kh-caps {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.kh-poster:lang(hi), .kh-h1:lang(hi), .kh-h2:lang(hi) { line-height: 1.15; }

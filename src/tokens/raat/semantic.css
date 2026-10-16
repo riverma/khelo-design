@@ -1,0 +1,50 @@
+/* Khelo Raat — semantic tokens. Same names as Mela, so markup moves
+   between the two without a single class changing. */
+
+.khelo-raat {
+  color-scheme: dark;
+
+  --surface-canvas-flat: var(--sky-900);
+  --surface-elevated:    var(--sky-800);
+  --surface-sunk:        var(--sky-950);
+
+  --text-heading:   var(--lamp-50);
+  --text-body:      var(--lamp-50);
+  --text-secondary: var(--lamp-300);
+  --text-muted:     var(--lamp-500);
+  --text-inverse:   var(--sky-900);
+
+  --border-control: var(--lamp-300);
+  --border-soft:    var(--sky-700);
+  --focus-ring:     var(--firozi-500);
+
+  /* Lit from inside: the fills glow and the ink goes dark. */
+  --accent-primary:    var(--marigold-500);
+  --on-primary:        var(--sky-900);
+  --accent-play:       var(--rani-500);
+  --on-play:           var(--sky-900);
+  --accent-secondary:  var(--mor-500);
+  --accent-calm:       var(--firozi-500);
+  --accent-done:       var(--tota-500);
+  --accent-note:       var(--kesar-500);
+
+  --wash-genda:  var(--marigold-100);
+  --wash-rani:   var(--rani-100);
+  --wash-firozi: var(--firozi-100);
+  --wash-tota:   var(--tota-100);
+  --wash-mor:    var(--mor-100);
+  --wash-haldi:  var(--haldi-100);
+
+  --selected-fill: var(--haldi-500);
+  --on-selected:   var(--sky-900);
+}
+
+.khelo-raat {
+  /* Icon fills. */
+  --icon-genda:  var(--marigold-500);
+  --icon-kesar:  var(--kesar-500);
+  --icon-rani:   var(--rani-500);
+  --icon-firozi: var(--firozi-500);
+  --icon-tota:   var(--tota-500);
+  --icon-mor:    var(--mor-500);
+}

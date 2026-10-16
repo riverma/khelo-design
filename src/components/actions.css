@@ -1,0 +1,82 @@
+/* Khelo — actions.
+
+   A button is a sticker: an ink outline and a hard shadow. Pressing it
+   pushes the sticker into the shadow — the squish. That is the only
+   motion, it lasts a tenth of a second, and it ends at rest. */
+
+.kh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--hit);
+  padding: 0.55rem 1.35rem 0.5rem;
+  border: var(--stroke-bold) solid var(--border-control);
+  border-radius: var(--radius-pill);
+  background: var(--accent-primary);
+  color: var(--on-primary);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.0625rem;
+  line-height: 1.1;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sticker);
+  transition: transform var(--dur-press) var(--ease-squish),
+              box-shadow var(--dur-press) var(--ease-squish);
+}
+.kh-btn:hover { transform: translate(-1px, -1px); box-shadow: var(--shadow-sticker-l); }
+.kh-btn:active { transform: translate(3px, 3px); box-shadow: var(--shadow-pressed); }
+.kh-btn:disabled, .kh-btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  background: var(--surface-sunk);
+  color: var(--text-secondary);
+  box-shadow: none;
+  transform: none;
+  border-style: dashed;
+}
+
+.kh-btn--play  { background: var(--accent-play); color: var(--on-play); }
+.kh-btn--ghost { background: var(--surface-elevated); color: var(--text-body); }
+.kh-btn--sm { min-height: 36px; padding: 0.3rem 0.9rem 0.25rem; font-size: 0.9375rem; box-shadow: var(--shadow-sticker-s); }
+.kh-btn--sm:hover { box-shadow: var(--shadow-sticker); }
+.kh-btn--lg { min-height: 56px; padding: 0.75rem 1.9rem 0.7rem; font-size: 1.25rem; box-shadow: var(--shadow-sticker-l); }
+
+/* A small control's painted size may be under 44px; its hit area is not. */
+.kh-btn--sm { position: relative; }
+.kh-btn--sm::after { content: ''; position: absolute; inset: -5px -2px; }
+
+.kh-link {
+  color: var(--accent-secondary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+.kh-link:hover { text-decoration-style: wavy; }
+.kh-link--quiet { color: inherit; text-decoration: none; }
+.kh-link--quiet:hover, .kh-link--quiet[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-decoration-style: wavy; text-underline-offset: 0.25em; }
+
+/* A chip: a choice among a few. aria-pressed carries the state; color
+   alone never does — the selected chip also gains its outline weight. */
+.kh-chip {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: 36px;
+  padding: 0.25rem 0.95rem 0.2rem;
+  border: var(--stroke) solid var(--border-control);
+  border-radius: var(--radius-pill);
+  background: var(--surface-elevated);
+  color: var(--text-body);
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--dur-press) var(--ease-squish);
+}
+.kh-chip::after { content: ''; position: absolute; inset: -5px -2px; }
+.kh-chip:active { transform: translate(1px, 1px); }
+.kh-chip[aria-pressed="true"] {
+  background: var(--selected-fill);
+  color: var(--on-selected);
+  border-width: var(--stroke-bold);
+  box-shadow: var(--shadow-sticker-s);
+}

@@ -1,0 +1,18 @@
+/* Khelo Raat — gradients. Lit posters on a night wall: duotones, never a
+   rainbow, each with measured ink. */
+
+.khelo-raat {
+  /* The page: deep neel overhead, a warm glow on the horizon where the
+     fair is still lit. */
+  --gradient-canvas: radial-gradient(90% 45% at 50% 115%, #5a2a6e99 0%, #5a2a6e00 70%),
+                     linear-gradient(180deg, #0c0928 0%, #14103a 45%, #1e1950 100%);
+
+  --band-genda:      linear-gradient(120deg, #ffe16a 0%, #ffbe3d 55%, #ff8a4c 100%);
+  --band-genda-ink:  #14103a;
+  --band-rani:       linear-gradient(120deg, #ff6fb8 0%, #ff5fb0 100%);
+  --band-rani-ink:   #14103a;
+  --band-firozi:     linear-gradient(120deg, #5ae6d8 0%, #3fe0d0 100%);
+  --band-firozi-ink: #14103a;
+  --band-mor:        linear-gradient(120deg, #8cc0ff 0%, #72b2ff 100%);
+  --band-mor-ink:    #14103a;
+}

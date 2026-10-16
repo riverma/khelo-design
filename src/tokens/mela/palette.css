@@ -1,0 +1,60 @@
+/* Khelo Mela — raw palette.
+   Truck-art color on a warm paper ground: a sunlit fair. Components never
+   reach for these directly; they go through semantic.css.
+   Each hue: 100 a pale wash, 300 a soft tint, 500 the painted color as it
+   appears on a truck panel, 700 a deep shade that holds text on paper. */
+
+.khelo-mela {
+  /* Paper and kajal. The ink is aubergine, not black; the paper is cream,
+     not white. Khelo inherits Ahimsa's refusal of both extremes. */
+  --paper-50:  #fff9ee;
+  --paper-100: #fbf0d9;
+  --paper-200: #f4e4c4;
+  --paper-300: #e8d2a8;
+  --kajal-300: #a796ab;
+  --kajal-500: #75637f;
+  --kajal-700: #4a3a5c;
+  --kajal-900: #2a1840;
+
+  /* Genda · marigold */
+  --marigold-100: #fae2b2;
+  --marigold-300: #f8c662;
+  --marigold-500: #f5a300;
+  --marigold-700: #a36b10;
+
+  /* Rani · hot pink */
+  --rani-100: #f5cac9;
+  --rani-300: #e87ba8;
+  --rani-500: #d81b7f;
+  --rani-700: #91165f;
+
+  /* Firozi · turquoise */
+  --firozi-100: #d1e3cf;
+  --firozi-300: #7ac8bc;
+  --firozi-500: #11a8a4;
+  --firozi-700: #156e76;
+
+  /* Tota · parrot green */
+  --tota-100: #dce3ba;
+  --tota-300: #9cc879;
+  --tota-500: #4fa82a;
+  --tota-700: #3c6e2a;
+
+  /* Kesar · saffron orange */
+  --kesar-100: #f9d8b7;
+  --kesar-300: #f5a671;
+  --kesar-500: #f06a1c;
+  --kesar-700: #9f4721;
+
+  /* Mor · peacock blue */
+  --mor-100: #d2d6d2;
+  --mor-300: #7da1c2;
+  --mor-500: #1660b0;
+  --mor-700: #18417d;
+
+  /* Haldi · turmeric yellow */
+  --haldi-100: #faeab7;
+  --haldi-300: #f9de72;
+  --haldi-500: #f7cf1d;
+  --haldi-700: #a48622;
+}
